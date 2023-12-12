@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.16",
+    "animate.css": "^4.1.1",
     "vue": "^3.3.11"
   },
   "devDependencies": {
