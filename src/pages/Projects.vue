@@ -21,7 +21,7 @@ const projects = ref([
         " tutors from a wide range of subjects. With its interface and robust features, Tutor is a one-stop " +
         "solution for all your tutoring needs. The platform offers a seamless experience for both students and " +
         "tutors, with a range of functionalities that make the process of learning and teaching a breeze.",
-    image: "/assets/projects/tutor.png",
+    image: "src/assets/projects/tutor.png",
     technologies: DEFAULT_TECHNOLOGIES,
   },
   {
@@ -33,7 +33,7 @@ const projects = ref([
         " landscape of education. With its innovative approach and a rich set of features, Rigel takes on the " +
         "challenges of the educational sector head-on. This cutting-edge platform offers an intuitive user " +
         "interface and a range of functionalities that promise to revolutionize teaching and learning.",
-    image: "/assets/projects/sms.jpg",
+    image: "src/assets/projects/sms.jpg",
     technologies: DEFAULT_TECHNOLOGIES,
   },
 
@@ -45,7 +45,7 @@ const projects = ref([
         "A web-based platform that allows companies to manage their employees, projects, and tasks. " +
         "The platform offers a seamless experience for both employees and managers, with a range of functionalities " +
         "that make the process of managing a company a smooth and hassle-free experience.",
-    image: "/assets/projects/ankeboot.png",
+    image: "src/assets/projects/ankeboot.png",
     technologies: DEFAULT_TECHNOLOGIES,
   },
   {
@@ -56,7 +56,7 @@ const projects = ref([
         "A web-based platform that allows users to bet on a wide range of sports. " +
         "The platform offers a seamless experience for both users and administrators, with a range of functionalities " +
         "that make the process of betting ultimately fun and exciting.",
-    image: "/assets/projects/bet.png",
+    image: "src/assets/projects/bet.png",
     technologies: DEFAULT_TECHNOLOGIES,
   },
 ]);

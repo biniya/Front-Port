@@ -9,7 +9,7 @@ const releases = ref([
     title: "HTML & CSS",
     description:
         "HTML is the standard markup language for Web pages. With HTML you can create your own Website. CSS is the language we use to style an HTML document. CSS describes how HTML elements should be displayed.",
-    icon: "/assets/html.svg",
+    icon: "src/assets/html.svg",
     isDark: false,
   },
   {
@@ -17,14 +17,14 @@ const releases = ref([
     description:
         "Tailwind CSS is basically a utility-first CSS framework for rapidly building custom user interfaces. It is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.",
     badge: "Latest",
-    icon: "assets/tailwind.svg",
+    icon: "src/assets/tailwind.svg",
     isDark: true,
   },
   {
     title: "JavaScript",
     description:
         "JavaScript is the Programming Language for the Web. JavaScript can update and change both HTML and CSS. JavaScript can calculate, manipulate and validate data.",
-    icon: "assets/js.svg",
+    icon: "src/assets/js.svg",
     isDark: true,
   },
   {
@@ -32,14 +32,14 @@ const releases = ref([
     description:
         "Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications.",
     badge: "Latest",
-    icon: "assets/vue.svg",
+    icon: "src/assets/vue.svg",
     isDark: true,
   },
   {
     title: "Bulma",
     description:
         "Bulma is a free, open source framework that provides ready-to-use frontend components that you can easily combine to build responsive web interfaces.",
-    icon: "/assets/bulma.svg",
+    icon: "src/assets/bulma.svg",
     isDark: true,
   },
   {
@@ -47,7 +47,7 @@ const releases = ref([
     description:
         "Laravel is a free, open-source PHP web framework intended for the development of web applications following the model–view–controller architectural pattern and based on Symfony.",
     badge: "Latest",
-    icon: "/assets/laravel.svg",
+    icon: "src/assets/laravel.svg",
     isDark: true,
   },
   {
@@ -55,7 +55,7 @@ const releases = ref([
     description:
         "Inertia.js lets you quickly build modern single-page React, Vue and Svelte apps using classic server-side routing and controllers.",
     badge: "Latest",
-    icon: "/assets/inertia.svg",
+    icon: "src/assets/inertia.svg",
     isDark: true,
   },
 ]);

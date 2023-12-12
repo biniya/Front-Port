@@ -1,11 +1,38 @@
 <script setup>
+import Tab from "../components/Tab.vue";
+import { ref } from "vue";
+import Projects from "./Projects.vue";
+import Contact from "./Contact.vue";
+import Landing from "./Landing.vue";
+import About from "./About.vue";
 
+const tabs = [
+  { title: "Home" },
+  { title: "Projects" },
+  { title: "About" },
+  { title: "Contact" },
+];
+
+const activeTab = ref("Home");
 </script>
 
 <template>
-<div>Header</div>
+  <div class="flex w-full items-center justify-center">
+    <Tab v-model:active="activeTab" :tabs="tabs">
+      <template #home>
+        <Landing />
+      </template>
+      <template #projects>
+        <Projects />
+      </template>
+      <template #about>
+        <About />
+      </template>
+      <template #contact>
+        <Contact />
+      </template>
+    </Tab>
+  </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
