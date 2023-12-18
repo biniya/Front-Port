@@ -5,11 +5,13 @@ import Projects from "./Projects.vue";
 import Contact from "./Contact.vue";
 import Landing from "./Landing.vue";
 import About from "./About.vue";
+import Testimonials from "./Testimonials.vue";
 
 const tabs = [
   { title: "Home" },
   { title: "Projects" },
   { title: "About" },
+  { title: "Testimonials"},
   { title: "Contact" },
 ];
 
@@ -27,6 +29,9 @@ const activeTab = ref("Home");
       </template>
       <template #about>
         <About />
+      </template>
+      <template #testimonials>
+        <Testimonials />
       </template>
       <template #contact>
         <Contact />
