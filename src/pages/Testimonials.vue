@@ -6,25 +6,25 @@ const animationClass = ref("animate__zoomIn");
 const testimonials = ref([
   {
     id: 1,
-    initials: 'JD',
-    name: 'Jane Doe',
-    message: 'This is a great company with excellent service.'
+    initials: 'LD',
+    name: 'Luis Diaz',
+    message: 'This is a great company with excellent service, I would recommend them to anyone. I am very satisfied with the work provided.'
   },
   {
     id: 2,
-    initials: 'JD',
-    name: 'John Doe',
-    message: 'Very satisfied with the work provided.'
+    initials: 'ST',
+    name: 'Selam Tesfaye',
+    message: 'Very satisfied with the work provided, My experience with Biniyam was great, work ethic was great, communication was great, and the work was great.'
   }, {
     id: 3,
-    initials: 'JD',
-    name: 'John Doe',
-    message: 'Very satisfied with the work provided.'
+    initials: 'HG',
+    name: 'Haile Gebreselassie',
+    message: 'He was very professional and did a great job on my website, I would recommend him to anyone.'
   }, {
     id: 4,
-    initials: 'JD',
-    name: 'John Doe',
-    message: 'Very satisfied with the work provided.'
+    initials: 'PW',
+    name: 'Paul Walker',
+    message: 'I am very satisfied with the work provided, He was very professional and did a great job on my website.'
   },
   // ...more testimonials
 ]);
@@ -34,7 +34,9 @@ const testimonials = ref([
       class="animate__animated animate__fadeOutUp fixed top-50 justify-center items-center w-full flex"
   >
         <span class="text-4xl md:text-4xl font-bold text-center"
-        >Tes</span
+        >
+          What People Say
+        </span
         >
   </div>
   <div :class="animationClass" class="animate__animated p-8 h-screen">

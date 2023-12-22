@@ -1,6 +1,7 @@
 <script setup>
-import { ref } from "vue";
+import {computed, ref} from "vue";
 import "animate.css";
+import DropDown from "../components/DropDown.vue";
 
 const animationClass = ref("animate__zoomIn");
 const DEFAULT_TECHNOLOGIES = [
@@ -10,6 +11,13 @@ const DEFAULT_TECHNOLOGIES = [
   "Laravel",
   "Inertia.js",
 ];
+
+const projectCategories = ref({
+  "Main Projects": "Main Projects",
+  "Side Projects": "Side Projects",
+});
+
+const selectedCategory = ref('Main Projects');
 
 const projects = ref([
   {
@@ -61,6 +69,57 @@ const projects = ref([
   },
 ]);
 
+const sideProjects = ref([
+  {
+    id: 1,
+    title: "Biniyam's Portfolio",
+    duration: "2021 - Present",
+    description:
+        "A web-based platform that allows users to bet on a wide range of sports. " +
+        "The platform offers a seamless experience for both users and administrators, with a range of functionalities " +
+        "that make the process of betting ultimately fun and exciting.",
+    image: "src/assets/projects/portfolio.png",
+    technologies: DEFAULT_TECHNOLOGIES,
+  },
+  {
+    id: 2,
+    title: "Biniyam's Portfolio",
+    duration: "2021 - Present",
+    description:
+        "A web-based platform that allows users to bet on a wide range of sports. " +
+        "The platform offers a seamless experience for both users and administrators, with a range of functionalities " +
+        "that make the process of betting ultimately fun and exciting.",
+    image: "src/assets/projects/portfolio.png",
+    technologies: DEFAULT_TECHNOLOGIES,
+  },
+  {
+    id: 3,
+    title: "Biniyam's Portfolio",
+    duration: "2021 - Present",
+    description:
+        "A web-based platform that allows users to bet on a wide range of sports. " +
+        "The platform offers a seamless experience for both users and administrators, with a range of functionalities " +
+        "that make the process of betting ultimately fun and exciting.",
+    image: "src/assets/projects/portfolio.png",
+    technologies: DEFAULT_TECHNOLOGIES,
+  },
+  {
+    id: 4,
+    title: "Biniyam's Portfolio",
+    duration: "2021 - Present",
+    description:
+        "A web-based platform that allows users to bet on a wide range of sports. " +
+        "The platform offers a seamless experience for both users and administrators, with a range of functionalities " +
+        "that make the process of betting ultimately fun and exciting.",
+    image: "src/assets/projects/portfolio.png",
+    technologies: DEFAULT_TECHNOLOGIES,
+  },
+]);
+
+const filteredProjects = computed(() => {
+  return selectedCategory.value === 'Main Projects' ? projects.value : sideProjects.value;
+});
+
 const techColors = {
   "Inertia.js": "bg-red-400",
   Laravel: "bg-blue-400",
@@ -86,10 +145,12 @@ function getColorForTech(tech) {
       :class="animationClass"
       class="animate__animated flex flex-col space-y-6 p-8 md:px-20"
   >
-    <h1 class="text-4xl font-bold text-gray-800">My Projects,</h1>
+    <div class="flex justify-between">
+      <h1 class="text-4xl font-bold text-gray-800">My Projects</h1>
+      <DropDown :options="projectCategories" v-model:modelValue="selectedCategory" />
+    </div>
     <div
-        v-for="(project, index) in projects"
-        :key="project.id"
+        v-for="(project, index) in filteredProjects" :key="project.id"
         class="relative shadow rounded p-4 flex flex-col md:flex-row space-x-0 md:space-x-4 space-y-4 md:space-y-0"
     >
       <!-- For even indexed projects: Image on the right, Description on the left -->
