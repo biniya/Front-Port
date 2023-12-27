@@ -39,7 +39,7 @@ const testimonials = ref([
         </span
         >
   </div>
-  <div :class="animationClass" class="animate__animated p-8 h-screen">
+  <div :class="animationClass" class="animate__animated p-8 h-screen max-w-7xl mx-auto overflow-hidden">
     <h2 class="flex items-start justify-start font-bold text-3xl">
       Testimonials
     </h2>

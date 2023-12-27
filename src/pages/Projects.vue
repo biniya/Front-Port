@@ -26,8 +26,8 @@ const projects = ref([
     duration: "2019 - 2020",
     description:
         "Tutor, a web app that connects students of all ages and academic levels with highly skilled" +
-        " tutors from a wide range of subjects. With its interface and robust features, Tutor is a one-stop " +
-        "solution for all your tutoring needs. The platform offers a seamless experience for both students and " +
+        " tutors from a wide range of subjects. Tutor is a one-stop solution for all your tutoring needs. " +
+        "The platform offers a seamless experience for both students and " +
         "tutors, with a range of functionalities that make the process of learning and teaching a breeze.",
     image: "src/assets/projects/tutor.png",
     technologies: DEFAULT_TECHNOLOGIES,
@@ -38,8 +38,8 @@ const projects = ref([
     duration: "2020 - Present",
     description:
         "The Rigel School Management System, a flagship product from Rigel Studio, is poised to redefine the" +
-        " landscape of education. With its innovative approach and a rich set of features, Rigel takes on the " +
-        "challenges of the educational sector head-on. This cutting-edge platform offers an intuitive user " +
+        " landscape of education. With its innovative approach and a rich set of features," +
+        " This cutting-edge platform offers an intuitive user " +
         "interface and a range of functionalities that promise to revolutionize teaching and learning.",
     image: "src/assets/projects/sms.jpg",
     technologies: DEFAULT_TECHNOLOGIES,
@@ -121,11 +121,11 @@ const filteredProjects = computed(() => {
 });
 
 const techColors = {
-  "Inertia.js": "bg-red-400",
-  Laravel: "bg-blue-400",
-  JavaScript: "bg-yellow-400",
-  "Vue.js": "bg-green-400",
-  "Tailwind CSS": "bg-indigo-400",
+  "Inertia.js": "border-red-400",
+  Laravel: "border-blue-400",
+  JavaScript: "border-yellow-400",
+  "Vue.js": "border-green-400",
+  "Tailwind CSS": "border-indigo-400",
   // Add other technologies and their colors as needed
 };
 
@@ -140,23 +140,24 @@ function getColorForTech(tech) {
         <span class="text-4xl md:text-4xl font-bold text-center"
         >My Projects</span
         >
+
   </div>
   <div
       :class="animationClass"
-      class="animate__animated flex flex-col space-y-6 p-8 md:px-20"
+      class="animate__animated flex flex-col space-y-6 p-8 md:px-20 mx-auto md:mx-32 overflow-hidden"
   >
-    <div class="flex justify-between">
-      <h1 class="text-4xl font-bold text-gray-800">My Projects</h1>
+    <div class="flex justify-between items-center">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-800">My Projects</h1>
       <DropDown :options="projectCategories" v-model:modelValue="selectedCategory" />
     </div>
     <div
         v-for="(project, index) in filteredProjects" :key="project.id"
-        class="relative shadow rounded p-4 flex flex-col md:flex-row space-x-0 md:space-x-4 space-y-4 md:space-y-0"
+        class="relative shadow rounded p-3 flex flex-col md:flex-row space-x-0 md:space-x-4 space-y-3 md:space-y-0"
     >
       <!-- For even indexed projects: Image on the right, Description on the left -->
       <template v-if="index % 2 === 0">
         <div
-            class="flex md:pt-0 pt-10 flex-col md:w-3/4 text-start w-full"
+            class="flex flex-col md:w-3/4 text-start w-full"
         >
           <h2 class="text-lg md:text-xl font-semibold">
             {{ project.title }}
@@ -168,7 +169,7 @@ function getColorForTech(tech) {
             {{ project.description }}
           </p>
           <div
-              class="flex absolute items-center left-0 md:bottom-0 md:top-auto top-0 w-full md:w-3/4 mt-5 text-xs py-2"
+              class="hidden md:flex absolute items-center md:bottom-0 md:top-auto w-full md:w-3/4 mt-5 text-xs py-2"
           >
             <ul class="flex pl-5 gap-2">
               <li
@@ -176,7 +177,7 @@ function getColorForTech(tech) {
                   :key="tech"
                   :class="[
                                     getColorForTech(tech),
-                                    'text-black md:px-2 md:py-1 py-0 px-1 rounded',
+                                    'text-black md:px-2 md:py-1 py-0 px-1 rounded-md border-2',
                                 ]"
               >
                 {{ tech }}
@@ -193,11 +194,6 @@ function getColorForTech(tech) {
 
       <!-- For odd indexed projects: Image on the left, Description on the right -->
       <template v-else>
-        <img
-            :src="project.image"
-            alt="Project Image"
-            class="w-full md:w-1/4 object-cover mb-4 md:mb-0 md:pt-0 pt-10"
-        />
         <div class="flex md:pt-0 flex-col md:w-3/4 text-start w-full">
           <h2 class="text-lg md:text-xl font-semibold">
             {{ project.title }}
@@ -209,7 +205,7 @@ function getColorForTech(tech) {
             {{ project.description }}
           </p>
           <div
-              class="flex absolute items-center right-0 md:bottom-0 md:top-auto top-0 w-full md:w-3/4 mt-5 text-xs py-2"
+              class="hidden md:flex absolute items-center md:bottom-0 md:top-auto w-full md:w-3/4 mt-5 text-xs py-2"
           >
             <ul class="flex pl-5 gap-2 justify-end">
               <li
@@ -217,7 +213,7 @@ function getColorForTech(tech) {
                   :key="tech"
                   :class="[
                                     getColorForTech(tech),
-                                    'text-black md:px-2 md:py-1 py-0 px-1 rounded',
+                                    'text-black md:px-2 md:py-1 py-0 px-1 rounded-md border-2',
                                 ]"
               >
                 {{ tech }}
@@ -225,6 +221,11 @@ function getColorForTech(tech) {
             </ul>
           </div>
         </div>
+        <img
+            :src="project.image"
+            alt="Project Image"
+            class="w-full md:w-1/4 object-cover mb-4 md:mb-0"
+        />
       </template>
     </div>
   </div>

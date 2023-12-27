@@ -19,7 +19,7 @@ const activeTab = ref("Home");
 </script>
 
 <template>
-  <div class="flex w-full items-center justify-center">
+  <div class="flex w-full z-50 items-center justify-center ">
     <Tab v-model:active="activeTab" :tabs="tabs">
       <template #home>
         <Landing />

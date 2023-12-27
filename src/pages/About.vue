@@ -69,7 +69,7 @@ const releases = ref([
   </div>
   <div
       :class="animationClass"
-      class="animate__animated items-start text-start mx-auto p-8 md:px-20 rounded-lg w-full flex flex-col"
+      class="animate__animated items-start text-start mx-auto p-8 md:px-20 rounded-lg w-full flex flex-col max-w-7xl overflow-hidden"
   >
     <h1 class="text-4xl font-bold text-gray-800">Hi there,</h1>
     <p class="mt-4 text-gray-600 tracking-widest">
