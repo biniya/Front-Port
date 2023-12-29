@@ -2,8 +2,20 @@
 import {computed, ref} from "vue";
 import "animate.css";
 import DropDown from "../components/DropDown.vue";
+import PhotoModal from "../components/PhotoModal.vue";
 
 const animationClass = ref("animate__zoomIn");
+
+const isModalVisible = ref(false);
+const modalTitle = ref('');
+const modalImages = ref([]);
+
+const showModal = (project) => {
+  modalTitle.value = project.title;
+  modalImages.value = Array.isArray(project.subImages) && project.subImages.length > 0 ? project.subImages : [project.image];
+  isModalVisible.value = true;
+};
+
 const DEFAULT_TECHNOLOGIES = [
   "JavaScript",
   "Vue.js",
@@ -30,6 +42,14 @@ const projects = ref([
         "The platform offers a seamless experience for both students and " +
         "tutors, with a range of functionalities that make the process of learning and teaching a breeze.",
     image: "src/assets/projects/tutor.png",
+    subImages: [
+      "src/assets/projects/tutor/home_t.png",
+      "src/assets/projects/tutor/tutor_home.png",
+      "src/assets/projects/tutor/tutor_profile.png",
+      "src/assets/projects/tutor/tutor_progress.png",
+      "src/assets/projects/tutor/tutor_options.png",
+      "src/assets/projects/tutor/tutor_jobs.png",
+    ],
     technologies: DEFAULT_TECHNOLOGIES,
   },
   {
@@ -42,6 +62,18 @@ const projects = ref([
         " This cutting-edge platform offers an intuitive user " +
         "interface and a range of functionalities that promise to revolutionize teaching and learning.",
     image: "src/assets/projects/sms.jpg",
+    subImages: [
+      "src/assets/projects/sms/SMS_Login.png",
+      "src/assets/projects/sms/Announcement.png",
+      "src/assets/projects/sms/School_Schedule.png",
+      "src/assets/projects/sms/Settings.png",
+      "src/assets/projects/sms/TimeTable.png",
+      "src/assets/projects/sms/Teachers_MyClass.png",
+      "src/assets/projects/sms/Teachers_Schedule.png",
+      "src/assets/projects/sms/Student_Detail.png",
+      "src/assets/projects/sms/Mark_Students.png",
+      "src/assets/projects/sms/LessonPlan.png",
+    ],
     technologies: DEFAULT_TECHNOLOGIES,
   },
 
@@ -75,43 +107,21 @@ const sideProjects = ref([
     title: "Biniyam's Portfolio",
     duration: "2021 - Present",
     description:
-        "A web-based platform that allows users to bet on a wide range of sports. " +
-        "The platform offers a seamless experience for both users and administrators, with a range of functionalities " +
-        "that make the process of betting ultimately fun and exciting.",
+        "Welcome to my digital realm, a vibrant showcase of my journey as a developer and designer." +
+        "Here, you'll find a curated collection of my projects, each a testament to my passion for creating elegant and efficient solutions," +
+    "My portfolio is not just a reflection of my technical proficiency but a window into my creative process and problem-solving capabilities.",
     image: "src/assets/projects/portfolio.png",
     technologies: DEFAULT_TECHNOLOGIES,
   },
   {
     id: 2,
-    title: "Biniyam's Portfolio",
+    title: "Wordle | Tic Tac Toe - Interactive Learning Platform",
     duration: "2021 - Present",
     description:
-        "A web-based platform that allows users to bet on a wide range of sports. " +
-        "The platform offers a seamless experience for both users and administrators, with a range of functionalities " +
-        "that make the process of betting ultimately fun and exciting.",
-    image: "src/assets/projects/portfolio.png",
-    technologies: DEFAULT_TECHNOLOGIES,
-  },
-  {
-    id: 3,
-    title: "Biniyam's Portfolio",
-    duration: "2021 - Present",
-    description:
-        "A web-based platform that allows users to bet on a wide range of sports. " +
-        "The platform offers a seamless experience for both users and administrators, with a range of functionalities " +
-        "that make the process of betting ultimately fun and exciting.",
-    image: "src/assets/projects/portfolio.png",
-    technologies: DEFAULT_TECHNOLOGIES,
-  },
-  {
-    id: 4,
-    title: "Biniyam's Portfolio",
-    duration: "2021 - Present",
-    description:
-        "A web-based platform that allows users to bet on a wide range of sports. " +
-        "The platform offers a seamless experience for both users and administrators, with a range of functionalities " +
-        "that make the process of betting ultimately fun and exciting.",
-    image: "src/assets/projects/portfolio.png",
+        "Discover the magic of Wordel, a web-based platform where language learning meets fun and engagement. " +
+        "Immerse yourself in tailored games and challenges that adapt to your pace and style. " +
+        "With each click, journey closer to mastery in a world where every word is an adventure.",
+    image: "src/assets/projects/wordle.png",
     technologies: DEFAULT_TECHNOLOGIES,
   },
 ]);
@@ -188,7 +198,14 @@ function getColorForTech(tech) {
         <img
             :src="project.image"
             alt="Project Image"
-            class="w-full md:w-1/4 object-cover mb-4 md:mb-0"
+            class="w-full md:w-1/4 object-cover mb-4 md:mb-0 cursor-pointer"
+            @click="showModal(project)"
+        />
+        <PhotoModal
+            :title="modalTitle"
+            :images="modalImages"
+            :show="isModalVisible"
+            @update:show="isModalVisible = $event"
         />
       </template>
 
@@ -224,8 +241,16 @@ function getColorForTech(tech) {
         <img
             :src="project.image"
             alt="Project Image"
-            class="w-full md:w-1/4 object-cover mb-4 md:mb-0"
+            class="w-full md:w-1/4 object-cover mb-4 md:mb-0 cursor-pointer"
+            @click="showModal(project)"
         />
+        <PhotoModal
+            :title="modalTitle"
+            :images="modalImages"
+            :show="isModalVisible"
+            @update:show="isModalVisible = $event"
+        />
+
       </template>
     </div>
   </div>
