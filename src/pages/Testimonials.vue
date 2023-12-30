@@ -1,67 +1,36 @@
 <script setup>
-import { ref } from 'vue';
-
-const animationClass = ref("animate__zoomIn");
+import { ref, computed } from 'vue';
+import TestimonialCard from '../components/TestimonialCard.vue';
 
 const testimonials = ref([
-  {
-    id: 1,
-    initials: 'LD',
-    name: 'Luis Diaz',
-    message: 'This is a great company with excellent service, I would recommend them to anyone. I am very satisfied with the work provided.'
-  },
-  {
-    id: 2,
-    initials: 'ST',
-    name: 'Selam Tesfaye',
-    message: 'Very satisfied with the work provided, My experience with Biniyam was great, work ethic was great, communication was great, and the work was great.'
-  }, {
-    id: 3,
-    initials: 'HG',
-    name: 'Haile Gebreselassie',
-    message: 'He was very professional and did a great job on my website, I would recommend him to anyone.'
-  }, {
-    id: 4,
-    initials: 'PW',
-    name: 'Paul Walker',
-    message: 'I am very satisfied with the work provided, He was very professional and did a great job on my website.'
-  },
-  // ...more testimonials
+  { id: 1, title: 'General Manager', name: 'Bereket Gobeze', description: '"It was a pleasure to have Biniyam as a Web and Mobile Application Developer on our team at Anbessa Sports Betting. His collaboration with designers crafted user-friendly interfaces, and their full-stack development skills brought complex projects to successful completion with a keen eye for detail and security. Biniyam\'s work ethic and innovative approach have left a significant mark on our company\'s standards. We\'re confident they will excel in their future roles and recommend them highly."' },
+  { id: 2, title: 'Project Manager', name: 'Kalid Abdu', description: '"Biniyam\'s tenure as a Full-Stack Web Developer at Rigel Software Solutions has been marked by a seamless fusion of design and development. Mastering VueJs, Tailwind CSS, and JavaScript, as well as Laravel and database technologies like MySQL, Biniyam has delivered high-performance, user-friendly web applications. Their commitment to code excellence and strategic problem-solving elevated our projects beyond technical goals. Notably, Biniyam enhanced our front-end offerings with Vue.js, creating reactive, dynamic user interfaces that align perfectly with Laravel\'s back-end services."' },
+  { id: 3, title: 'COO', name: 'Adil Abdu', description: '"Biniyam has been an invaluable asset to various projects, showcasing versatility and problem-solving prowess as a Full-Stack Developer. They\'ve successfully tackled diverse challenges, from minor fixes to constructing full-scale portfolios. With each task, Biniyam demonstrated technical agility and a keen eye for detail, ensuring each solution was not just a patch but an upgrade. Their portfolio work reflects a sophisticated understanding of user experience and design principles, resulting in polished, professional online representations for our clients."' },
+  { id: 3, title: 'CEO', name: 'Yosef Seboka', description: '"Working across various projects, Biniyam has adeptly navigated the complexities of full-stack development, delivering bespoke solutions with precision. His expertise extends beyond routine tasks, addressing intricate problems with innovative strategies that transform challenges into seamless functionality. Biniyam has not only fixed issues but reimagined the possibilities of web presence, crafting portfolios that stand as testaments to their creative vision and technical acumen. The impact of his work is evident in the enhanced performance and refined aesthetic of every project he touch."' },
 ]);
+
+// Visible testimonials in the carousel
+const displayedTestimonials = computed(() => {
+  const sortedTestimonials = [...testimonials.value];
+  return sortedTestimonials;
+});
+
 </script>
+
 <template>
-  <div
-      class="animate__animated animate__fadeOutUp fixed top-50 justify-center items-center w-full flex"
-  >
-        <span class="text-4xl md:text-4xl font-bold text-center"
-        >
-          What People Say
-        </span
-        >
-  </div>
-  <div :class="animationClass" class="animate__animated p-8 h-screen max-w-7xl mx-auto overflow-hidden">
-    <h2 class="flex items-start justify-start font-bold text-3xl">
-      Testimonials
-    </h2>
-  <div
-      class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4"
-  >
-        <div v-for="testimonial in testimonials" :key="testimonial.id" class="rounded-lg shadow-lg bg-slate-200 p-6">
-          <div class="flex items-center space-x-4">
-            <div class="rounded-full bg-indigo-600 w-12 h-12 flex items-center justify-center">
-              <!-- User icon or image -->
-              <span class="text-white text-xl">{{ testimonial.initials }}</span>
-            </div>
-            <div class="font-medium text-lg">{{ testimonial.name }}</div>
-          </div>
-          <div class="mt-4 text-gray-600">
-            {{ testimonial.message }}
-          </div>
-        </div>
-      </div>
+  <div class="relative top-50 p-8 md:px-20 items-start text-start mx-auto gap-4 rounded-lg w-full flex flex-col h-screen">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4 w-full">
+      <!-- Sliding Testimonial Card -->
+      <TestimonialCard
+          v-for="(testimonial, index) in displayedTestimonials"
+          :key="testimonial.id"
+          :testimonial="testimonial"
+          :is-active="index === activeIndex"
+      />
     </div>
+  </div>
 </template>
 
 <style>
-/* Add any additional custom styles here */
 </style>
+
