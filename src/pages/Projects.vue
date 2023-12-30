@@ -51,6 +51,7 @@ const projects = ref([
       "src/assets/projects/tutor/tutor_jobs.png",
     ],
     technologies: DEFAULT_TECHNOLOGIES,
+    link: "https://saiph.rigel.studio",
   },
   {
     id: 2,
@@ -75,6 +76,7 @@ const projects = ref([
       "src/assets/projects/sms/LessonPlan.png",
     ],
     technologies: DEFAULT_TECHNOLOGIES,
+    link: "https://demo.rigel.studio",
   },
 
   {
@@ -87,6 +89,7 @@ const projects = ref([
         "that make the process of managing a company a smooth and hassle-free experience.",
     image: "src/assets/projects/ankeboot.png",
     technologies: DEFAULT_TECHNOLOGIES,
+    link: "https://www.ankeboot.com/",
   },
   {
     id: 4,
@@ -98,6 +101,7 @@ const projects = ref([
         "that make the process of betting ultimately fun and exciting.",
     image: "src/assets/projects/bet.png",
     technologies: DEFAULT_TECHNOLOGIES,
+    link: "https://www.betplus.et/",
   },
 ]);
 
@@ -112,6 +116,7 @@ const sideProjects = ref([
     "My portfolio is not just a reflection of my technical proficiency but a window into my creative process and problem-solving capabilities.",
     image: "src/assets/projects/portfolio.png",
     technologies: DEFAULT_TECHNOLOGIES,
+    link: "https://biniyam.vercel.app/",
   },
   {
     id: 2,
@@ -123,6 +128,7 @@ const sideProjects = ref([
         "With each click, journey closer to mastery in a world where every word is an adventure.",
     image: "src/assets/projects/wordle.png",
     technologies: DEFAULT_TECHNOLOGIES,
+    link: "https://https-github-com-biniyam-wordle.vercel.app/",
   },
 ]);
 
@@ -169,8 +175,14 @@ function getColorForTech(tech) {
         <div
             class="flex flex-col md:w-3/4 text-start w-full"
         >
-          <h2 class="text-lg md:text-xl font-semibold">
-            {{ project.title }}
+          <h2 class="flex gap-4 text-lg md:text-xl font-semibold">
+            <span>{{ project.title }}</span>
+                <a
+                    :href="project.link"
+                    target="_blank"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
           </h2>
           <time class="text-xs text-gray-500 underline">
             {{ project.duration }}
@@ -212,8 +224,14 @@ function getColorForTech(tech) {
       <!-- For odd indexed projects: Image on the left, Description on the right -->
       <template v-else>
         <div class="flex md:pt-0 flex-col md:w-3/4 text-start w-full">
-          <h2 class="text-lg md:text-xl font-semibold">
-            {{ project.title }}
+          <h2 class="flex gap-4 text-lg md:text-xl font-semibold">
+            <span>{{ project.title }}</span>
+            <a
+                :href="project.link"
+                target="_blank"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
           </h2>
           <time class="text-xs text-gray-500 underline">
             {{ project.duration }}
