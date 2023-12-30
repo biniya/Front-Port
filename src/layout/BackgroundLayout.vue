@@ -2,7 +2,6 @@
 </script>
 <template>
   <div class="relative">
-    <div class="svg-background">
     <div class="absolute inset-0 mx-auto w-full z-0 flex bg-white p-16">
       <div class="relative w-full flex flex-wrap justify-center items-center">
               <div
@@ -19,17 +18,10 @@
     </div>
       <slot></slot>
   </div>
-  </div>
 </template>
 
 <style scoped>
 .gradient-mask {
   mask-image: radial-gradient(rgba(0, 0, 0, 0.7) 0%, transparent 100%);
-}
-
-.svg-background {
-  background-image: url("src/assets/laravel_and_vue.svg");
-  background-repeat: no-repeat;
-  background-size: cover; /* or contain depending on what you need */
 }
 </style>

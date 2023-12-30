@@ -31,8 +31,8 @@ const previousImage = () => {
 };
 </script>
 <template>
-  <div v-if="show" class="fixed inset-0 bg-slate-200 flex rounded-md justify-center items-start pt-20 z-50">
-    <div class="bg-white p-4 rounded-lg max-w-4xl  w-full">
+  <div v-if="show" class="fixed inset-0 bg-slate-200 flex h-fit rounded-md pb-10 justify-center items-start pt-20">
+    <div class="bg-white p-4 rounded-lg max-w-4xl w-full">
       <div class="flex justify-between items-start mb-3">
         <h2 class="text-xl font-bold">{{ title }}</h2>
         <button class="text-black font-semibold" @click="closeModal">x</button>
