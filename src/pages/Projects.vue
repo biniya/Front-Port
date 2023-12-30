@@ -87,7 +87,8 @@ const projects = ref([
         "A web-based platform that allows companies to manage their employees, projects, and tasks. " +
         "The platform offers a seamless experience for both employees and managers, with a range of functionalities " +
         "that make the process of managing a company a smooth and hassle-free experience.",
-    image: "src/assets/projects/ankeboot.png",
+    // image: "src/assets/projects/ankeboot.png",
+    image: new URL('../assets/projects/ankeboot.png', import.meta.url).href,
     technologies: DEFAULT_TECHNOLOGIES,
     link: "https://www.ankeboot.com/",
   },
