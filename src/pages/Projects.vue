@@ -41,14 +41,14 @@ const projects = ref([
         " tutors from a wide range of subjects. Tutor is a one-stop solution for all your tutoring needs. " +
         "The platform offers a seamless experience for both students and " +
         "tutors, with a range of functionalities that make the process of learning and teaching a breeze.",
-    image: "src/assets/projects/tutor.png",
+    // image: "src/assets/projects/tutor.png",
+    image: new URL('../assets/projects/tutor.png', import.meta.url).href,
     subImages: [
-      "src/assets/projects/tutor/home_t.png",
-      "src/assets/projects/tutor/tutor_home.png",
-      "src/assets/projects/tutor/tutor_profile.png",
-      "src/assets/projects/tutor/tutor_progress.png",
-      "src/assets/projects/tutor/tutor_options.png",
-      "src/assets/projects/tutor/tutor_jobs.png",
+      new URL('../assets/projects/tutor/home_t.png', import.meta.url).href,
+      new URL('../assets/projects/tutor/tutor_profile.png', import.meta.url).href,
+      new URL('../assets/projects/tutor/tutor_progress.png', import.meta.url).href,
+      new URL('../assets/projects/tutor/tutor_options.png', import.meta.url).href,
+      new URL('../assets/projects/tutor/tutor_jobs.png', import.meta.url).href,
     ],
     technologies: DEFAULT_TECHNOLOGIES,
     link: "https://saiph.rigel.studio",
@@ -62,18 +62,18 @@ const projects = ref([
         " landscape of education. With its innovative approach and a rich set of features," +
         " This cutting-edge platform offers an intuitive user " +
         "interface and a range of functionalities that promise to revolutionize teaching and learning.",
-    image: "src/assets/projects/sms.jpg",
+    // image: "src/assets/projects/sms.jpg",
+    image: new URL('../assets/projects/sms.jpg', import.meta.url).href,
     subImages: [
-      "src/assets/projects/sms/SMS_Login.png",
-      "src/assets/projects/sms/Announcement.png",
-      "src/assets/projects/sms/School_Schedule.png",
-      "src/assets/projects/sms/Settings.png",
-      "src/assets/projects/sms/TimeTable.png",
-      "src/assets/projects/sms/Teachers_MyClass.png",
-      "src/assets/projects/sms/Teachers_Schedule.png",
-      "src/assets/projects/sms/Student_Detail.png",
-      "src/assets/projects/sms/Mark_Students.png",
-      "src/assets/projects/sms/LessonPlan.png",
+      new URL('../assets/projects/sms/SMS_Login.png', import.meta.url).href,
+      new URL('../assets/projects/sms/Announcement.png', import.meta.url).href,
+      new URL('../assets/projects/sms/School_Schedule.png', import.meta.url).href,
+      new URL('../assets/projects/sms/Settings.png', import.meta.url).href,
+      new URL('../assets/projects/sms/TimeTable.png', import.meta.url).href,
+      new URL('../assets/projects/sms/Teachers_MyClass.png', import.meta.url).href,
+      new URL('../assets/projects/sms/Teachers_Schedule.png', import.meta.url).href,
+      new URL('../assets/projects/sms/Mark_Students.png', import.meta.url).href,
+      new URL('../assets/projects/sms/LessonPlan.png', import.meta.url).href,
     ],
     technologies: DEFAULT_TECHNOLOGIES,
     link: "https://demo.rigel.studio",
@@ -99,7 +99,8 @@ const projects = ref([
         "A web-based platform that allows users to bet on a wide range of sports. " +
         "The platform offers a seamless experience for both users and administrators, with a range of functionalities " +
         "that make the process of betting ultimately fun and exciting.",
-    image: "src/assets/projects/bet.png",
+    // image: "src/assets/projects/bet.png",
+    image: new URL('../assets/projects/bet.png', import.meta.url).href,
     technologies: DEFAULT_TECHNOLOGIES,
     link: "https://www.betplus.et/",
   },
@@ -114,7 +115,8 @@ const sideProjects = ref([
         "Welcome to my digital realm, a vibrant showcase of my journey as a developer and designer." +
         "Here, you'll find a curated collection of my projects, each a testament to my passion for creating elegant and efficient solutions," +
     "My portfolio is not just a reflection of my technical proficiency but a window into my creative process and problem-solving capabilities.",
-    image: "src/assets/projects/portfolio.png",
+    // image: "src/assets/projects/portfolio.png",
+    image: new URL('../assets/projects/portfolio.png', import.meta.url).href,
     technologies: DEFAULT_TECHNOLOGIES,
     link: "https://biniyam.vercel.app/",
   },
@@ -126,7 +128,8 @@ const sideProjects = ref([
         "Discover the magic of Wordel, a web-based platform where language learning meets fun and engagement. " +
         "Immerse yourself in tailored games and challenges that adapt to your pace and style. " +
         "With each click, journey closer to mastery in a world where every word is an adventure.",
-    image: "src/assets/projects/wordle.png",
+    // image: "src/assets/projects/wordle.png",
+    image: new URL('../assets/projects/wordle.png', import.meta.url).href,
     technologies: DEFAULT_TECHNOLOGIES,
     link: "https://https-github-com-biniyam-wordle.vercel.app/",
   },

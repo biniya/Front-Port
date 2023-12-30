@@ -114,7 +114,7 @@ const animationClass = ref("animate__zoomIn");
 </template>
 <style scoped>
 .svg-background {
-  background-image: url("src/assets/coding.svg");
+  background-image: url("../assets/coding.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }

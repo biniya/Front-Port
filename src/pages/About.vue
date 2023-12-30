@@ -9,7 +9,8 @@ const releases = ref([
     title: "HTML & CSS",
     description:
         "HTML is the standard markup language for Web pages. With HTML you can create your own Website. CSS is the language we use to style an HTML document. CSS describes how HTML elements should be displayed.",
-    icon: "src/assets/html.svg",
+    // icon: "src/assets/html.svg",
+    icon: new URL('../assets/html.svg', import.meta.url).href,
     isDark: false,
   },
   {
@@ -17,14 +18,16 @@ const releases = ref([
     description:
         "Tailwind CSS is basically a utility-first CSS framework for rapidly building custom user interfaces. It is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.",
     badge: "Latest",
-    icon: "src/assets/tailwind.svg",
+    // icon: "src/assets/tailwind.svg",
+    icon: new URL('../assets/tailwind.svg', import.meta.url).href,
     isDark: true,
   },
   {
     title: "JavaScript",
     description:
         "JavaScript is the Programming Language for the Web. JavaScript can update and change both HTML and CSS. JavaScript can calculate, manipulate and validate data.",
-    icon: "src/assets/js.svg",
+    // icon: "src/assets/js.svg",
+    icon: new URL('../assets/js.svg', import.meta.url).href,
     isDark: true,
   },
   {
@@ -32,14 +35,16 @@ const releases = ref([
     description:
         "Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications.",
     badge: "Latest",
-    icon: "src/assets/vue.svg",
+    // icon: "src/assets/vue.svg",
+    icon: new URL('../assets/vue.svg', import.meta.url).href,
     isDark: true,
   },
   {
     title: "Bulma",
     description:
         "Bulma is a free, open source framework that provides ready-to-use frontend components that you can easily combine to build responsive web interfaces.",
-    icon: "src/assets/bulma.svg",
+    // icon: "src/assets/bulma.svg",
+    icon: new URL('../assets/bulma.svg', import.meta.url).href,
     isDark: true,
   },
   {
@@ -47,7 +52,8 @@ const releases = ref([
     description:
         "Laravel is a free, open-source PHP web framework intended for the development of web applications following the model–view–controller architectural pattern and based on Symfony.",
     badge: "Latest",
-    icon: "src/assets/laravel.svg",
+    // icon: "src/assets/laravel.svg",
+    icon: new URL('../assets/laravel.svg', import.meta.url).href,
     isDark: true,
   },
   {
@@ -55,7 +61,8 @@ const releases = ref([
     description:
         "Inertia.js lets you quickly build modern single-page React, Vue and Svelte apps using classic server-side routing and controllers.",
     badge: "Latest",
-    icon: "src/assets/inertia.svg",
+    // icon: "src/assets/inertia.svg",
+    icon: new URL('../assets/inertia.svg', import.meta.url).href,
     isDark: true,
   },
 ]);
