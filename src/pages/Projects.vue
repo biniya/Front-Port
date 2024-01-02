@@ -164,7 +164,7 @@ function getColorForTech(tech) {
   </div>
   <div
       :class="animationClass"
-      class="animate__animated flex flex-col space-y-6 p-8 md:px-20 mx-auto md:mx-32 overflow-hidden"
+      class="animate__animated flex flex-col space-y-6 p-8 min-h-screen md:px-20 mx-auto md:mx-32 overflow-hidden"
   >
     <div class="flex justify-between items-center">
       <h1 class="text-3xl md:text-4xl font-bold text-gray-800">My Projects</h1>
