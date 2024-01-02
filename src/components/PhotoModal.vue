@@ -31,25 +31,25 @@ const previousImage = () => {
 };
 </script>
 <template>
-  <div v-if="show" class="fixed inset-0 bg-slate-200 flex h-fit rounded-md pb-10 justify-center items-start pt-20">
-    <div class="bg-white p-4 rounded-lg max-w-4xl w-full">
+  <div v-if="show" class="fixed inset-0 bg-transparent flex h-fit rounded-md pb-10 justify-center items-start pt-20">
+    <div class="relative bg-slate-200 p-10 rounded-lg max-w-4xl w-full">
       <div class="flex justify-between items-start mb-3">
         <h2 class="text-xl font-bold">{{ title }}</h2>
-        <button class="text-black font-semibold" @click="closeModal">x</button>
+        <button class="absolute top-0 right-0 pt-2 pr-4 text-black text-2xl font-semibold" @click="closeModal">x</button>
       </div>
       <img :src="currentImage" :alt="title" class="w-full h-auto rounded">
       <!-- Navigation buttons -->
-      <div class="flex justify-center gap-4 mt-2">
+      <div class="flex justify-center gap-4 mt-6">
         <button
             v-if="currentImageIndex > 0"
-            class="mx-2 bg-slate-200 p-2 w-32 rounded-md"
+            class="mx-2 bg-white p-2 w-32 rounded-md"
             @click="previousImage"
         >
           Previous
         </button>
         <button
             v-if="currentImageIndex < (props.images.length - 1)"
-            class="mx-2 bg-slate-200 p-2 w-32 rounded-md"
+            class="mx-2 bg-white p-2 w-32 rounded-md"
             @click="nextImage"
         >
           Next
