@@ -23,6 +23,17 @@ const DEFAULT_TECHNOLOGIES = [
   "Laravel",
   "Inertia.js",
 ];
+const TECHNOLOGIES = [
+  "Vue.js",
+  "JavaScript",
+  "Tailwind CSS",
+  "Laravel",
+];
+const Side_TECHNOLOGIES = [
+  "Vue.js",
+  "JavaScript",
+  "Tailwind CSS",
+];
 
 const projectCategories = ref({
   "Main Projects": "Main Projects",
@@ -89,7 +100,7 @@ const projects = ref([
         "that make the process of managing a company a smooth and hassle-free experience.",
     // image: "src/assets/projects/ankeboot.png",
     image: new URL('../assets/projects/ankeboot.png', import.meta.url).href,
-    technologies: DEFAULT_TECHNOLOGIES,
+    technologies: TECHNOLOGIES,
     link: "https://www.ankeboot.com/",
   },
   {
@@ -102,7 +113,7 @@ const projects = ref([
         "that make the process of betting ultimately fun and exciting.",
     // image: "src/assets/projects/bet.png",
     image: new URL('../assets/projects/bet.png', import.meta.url).href,
-    technologies: DEFAULT_TECHNOLOGIES,
+    technologies: TECHNOLOGIES,
     link: "https://www.betplus.et/",
   },
 ]);
@@ -118,7 +129,7 @@ const sideProjects = ref([
     "My portfolio is not just a reflection of my technical proficiency but a window into my creative process and problem-solving capabilities.",
     // image: "src/assets/projects/portfolio.png",
     image: new URL('../assets/projects/portfolio.png', import.meta.url).href,
-    technologies: DEFAULT_TECHNOLOGIES,
+    technologies: Side_TECHNOLOGIES,
     link: "https://biniyam.vercel.app/",
   },
   {
@@ -131,7 +142,7 @@ const sideProjects = ref([
         "With each click, journey closer to mastery in a world where every word is an adventure.",
     // image: "src/assets/projects/wordle.png",
     image: new URL('../assets/projects/wordle.png', import.meta.url).href,
-    technologies: DEFAULT_TECHNOLOGIES,
+    technologies: Side_TECHNOLOGIES,
     link: "https://https-github-com-biniyam-wordle.vercel.app/",
   },
 ]);
