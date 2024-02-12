@@ -36,7 +36,7 @@ const releases = ref([
     title: "Vue.js",
     description:
         "Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications.",
-    badge: "4+ yrs",
+    badge: "5+ yrs",
     // icon: "src/assets/vue.svg",
     icon: new URL('../assets/vue.svg', import.meta.url).href,
     isDark: true,
@@ -54,7 +54,7 @@ const releases = ref([
     title: "Laravel",
     description:
         "Laravel is a free, open-source PHP web framework intended for the development of web applications following the model–view–controller architectural pattern and based on Symfony.",
-    badge: "4+ yrs",
+    badge: "5+ yrs",
     // icon: "src/assets/laravel.svg",
     icon: new URL('../assets/laravel.svg', import.meta.url).href,
     isDark: true,
@@ -66,6 +66,15 @@ const releases = ref([
     badge: "1+ yrs",
     // icon: "src/assets/inertia.svg",
     icon: new URL('../assets/inertia.svg', import.meta.url).href,
+    isDark: true,
+  },
+  {
+    title: "Sanity",
+    description:
+        "Sanity delivers content anywhere (just like a headless CMS). Beyond that, Sanity gives you total composability. A fully decoupled, real-time content back end. Entirely customizable content workspaces.",
+    badge: "1+ yrs",
+    // icon: "src/assets/inertia.svg",
+    icon: new URL('../assets/sanity.svg', import.meta.url).href,
     isDark: true,
   },
   {
