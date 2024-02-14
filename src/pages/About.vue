@@ -95,6 +95,13 @@ const releases = ref([
     isDark: true,
   },
   {
+    title: "Nuxt",
+    description: "Nuxt provides a simple way to share a reactive and SSR-friendly state between components. Create smooth transitions between layouts, pages and components with a built-in support for Vue & browser transitions.",
+    badge: "1+ yrs",
+    icon: new URL('../assets/nuxt.svg', import.meta.url).href,
+    isDark: true,
+  },
+  {
     title: "Docker",
     description:
         "Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.",
