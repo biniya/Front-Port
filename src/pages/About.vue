@@ -109,6 +109,33 @@ const releases = ref([
     badge: "1+ yrs",
     icon: new URL('../assets/docker.svg', import.meta.url).href,
     isDark: true,
+  },
+  {
+    title: "Algolia",
+    description:
+        "Algolia is a hosted search engine capable of delivering real-time results from the first keystroke. Algolia's powerful API lets you quickly and seamlessly implement search within your websites and mobile applications.",
+    // icon: "src/assets/algolia.svg",
+    badge: "1+ yrs",
+    icon: new URL('../assets/algolia.svg', import.meta.url).href,
+    isDark: true,
+  },
+  {
+    title: "Firebase",
+    description:
+        "Firebase is a platform developed by Google for creating mobile and web applications. It was originally an independent company founded in 2011. In 2014, Google acquired the platform and it is now their flagship offering for app development.",
+    // icon: "src/assets/firebase.svg",
+    badge: "1+ yrs",
+    icon: new URL('../assets/firebase.svg', import.meta.url).href,
+    isDark: true,
+  },
+  {
+    title: "Netlify",
+    description:
+        "Netlify is a San Francisco-based cloud computing company that offers hosting and automation services for web projects. Its features include continuous deployment from Git across Netlify Edge, the company's global application delivery network infrastructure.",
+    // icon: "src/assets/netlify.svg",
+    badge: "1+ yrs",
+    icon: new URL('../assets/netlify.svg', import.meta.url).href,
+    isDark: true,
   }
 ]);
 </script>
